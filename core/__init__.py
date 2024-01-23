@@ -8,7 +8,7 @@ from flask_cors import CORS
 from flask_orator import Orator
 from flask_redis import FlaskRedis
 from flask_sockets import Sockets
-from core.view import Decorator
+from core.module import Decorator
 from flask import (Flask, send_from_directory)
 
 version = "0.6.3"
@@ -23,20 +23,20 @@ w5_apps_path = None
 
 
 def init_route(app):
-    from core.view.login import r as r_login
-    from core.view.user import r as r_user
-    from core.view.type import r as r_type
-    from core.view.variablen import r as r_variablen
-    from core.view.system import r as r_system
-    from core.view.apps import r as r_apps
-    from core.view.workflow import r as r_workflow
-    from core.view.logs import r as r_logs
-    from core.view.dashboard import r as r_dashboard
-    from core.view.api import r as r_api
-    from core.view.report import r as r_report
-    from core.view.timer import r as r_timer
-    from core.view.workflow import ws as ws_workflow
-    from core.view.audit import r as r_audit
+    from core.module.login import r as r_login
+    from core.module.user import r as r_user
+    from core.module.type import r as r_type
+    from core.module.variablen import r as r_variablen
+    from core.module.system import r as r_system
+    from core.module.apps import r as r_apps
+    from core.module.workflow import r as r_workflow
+    from core.module.logs import r as r_logs
+    from core.module.dashboard import r as r_dashboard
+    from core.module.api import r as r_api
+    from core.module.report import r as r_report
+    from core.module.timer import r as r_timer
+    from core.module.workflow import ws as ws_workflow
+    from core.module.audit import r as r_audit
 
     route_list = [r_login, r_user, r_type, r_variablen, r_system, r_apps, r_workflow, r_logs, r_dashboard, r_api,
                   r_report, r_timer, r_audit]
@@ -174,7 +174,7 @@ def init_web_sockets(app):
 
 
 def init_w5(app):
-    from core.view.system.view import init_key, init_timer, init_async
+    from core.module.system.view import init_key, init_timer, init_async
     init_key()
     init_timer()
     init_async()
