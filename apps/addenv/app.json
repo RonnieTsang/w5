@@ -1,0 +1,40 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "CDM调用(v2)",
+  "version": "0.1",
+  "description": "CDM功能接口调用v2",
+  "type": "基础应用",
+  "action": [
+    {
+      "name": "CDM调用(v2)",
+      "func": "cdm_api"
+    }
+  ],
+  "args": {
+    "cdm_api": [
+      {
+        "key": "access_token",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "api",
+        "type": "select",
+        "required": true,
+        "default": "",
+        "data": [
+          "获取虚拟化平台列表",
+          "添加虚拟化平台",
+          "获取定时策略列表",
+          "添加虚拟机备份任务"
+        ]
+      },
+      {
+        "key": "params",
+        "type": "text",
+        "required": false
+      }
+    ]
+  }
+}

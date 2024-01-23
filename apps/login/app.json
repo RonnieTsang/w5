@@ -1,0 +1,28 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "BFF登录",
+  "version": "0.1",
+  "description": "BFF登录授权，获取access_token",
+  "type": "基础应用",
+  "action": [
+    {
+      "name": "BFF登录",
+      "func": "login"
+    }
+  ],
+  "args": {
+    "login": [
+      {
+        "key": "account",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "password",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}

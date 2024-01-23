@@ -1,0 +1,48 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "CDM调用(v1)",
+  "version": "0.1",
+  "description": "CDM功能接口调用v1",
+  "type": "基础应用",
+  "action": [
+    {
+      "name": "CDM调用(v1)",
+      "func": "cdm_api"
+    }
+  ],
+  "args": {
+    "cdm_api": [
+      {
+        "key": "access_token",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "url",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "method",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "path_params",
+        "type": "text",
+        "required": false
+      },
+      {
+        "key": "query_params",
+        "type": "text",
+        "required": false
+      },
+      {
+        "key": "json_params",
+        "type": "text",
+        "required": false
+      }
+    ]
+  }
+}
